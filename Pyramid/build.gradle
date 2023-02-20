@@ -1,0 +1,16 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+repositories {
+    jcenter()
+}
+/* change the group element in order to generate the jar file from source */
+dependencies {
+    testImplementation( group:'junit', name:'junit', version:'4.13.2')
+    testImplementation( group:'org.hamcrest', name:'hamcrest', version:'2.2')
+    testImplementation( group:'org.hamcrest', name:'hamcrest-core', version:'2.2')
+}
+
+application {
+    mainClassName = 'main.java.com.ncr.test.pyramid.OurProgram'
+}
